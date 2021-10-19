@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://kobexu0824.github.io">
-  <title>kobexu的博客</title>
+  <title>Tag: JS | kobexu的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="kobexu的博客">
-<meta property="og:url" content="https://kobexu0824.github.io/index.html">
+<meta property="og:url" content="https://kobexu0824.github.io/tags/JS/index.html">
 <meta property="og:site_name" content="kobexu的博客">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="许大杰">
@@ -136,61 +136,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-2021-10-19" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/10/19/2021-10-19/" class="archive-article-date">
+  	<time datetime="2021-10-19T14:37:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-19</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/10/19/2021-10-19/">事件循环机制</a>
+      <a class="archive-article-title" href="/2021/10/19/2021-10-19/">事件循环机制</a>
     </h1>
   
 
-        
-        <a href="/2021/10/19/2021-10-19/" class="archive-article-date">
-  	<time datetime="2021-10-19T14:37:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>进程、线程</li>
-</ul>
-<blockquote>
-<ol>
-<li>进程是系统分配的独立资源，是 CPU 资源分配的基本单位，进程是由一个或者多个线程组成的。</li>
-<li>线程是进程的执行流，是CPU调度和分派的基本单位，同个进程之中的多个线程之间是共享该进程的资源的。</li>
-</ol>
-</blockquote>
-<ul>
-<li>浏览器内核</li>
-</ul>
-<blockquote>
-<ol>
-<li>浏览器是多进程的，浏览器每一个 tab 标签都代表一个独立的进程（也不一定，因为多个空白 tab 标签会合并成一个进程），浏览器内核（浏览器渲染进程）属于浏览器多进程中的一种。 </li>
-<li>浏览器内核有多种线程在工作。<blockquote>
-<ul>
-<li>GUI 渲染线程: 负责渲染页面，解析 HTML，CSS 构成 DOM 树等，当页面重绘或者由于某种操作引起回流都会调起该程和 JS 引擎线程是互斥的，当 JS 引擎线程在工作的时候，GUI 渲染线程会被挂起，GUI 更新被放入在 JS 任务队列中，等待 JS 引擎线程空闲的时候继续执行。</li>
-<li>JS 引擎线程: 单线程工作，负责解析运行 JavaScript 脚本。和 GUI 渲染线程互斥，JS 运行耗时过长就会导致页面阻塞。     </li>
-<li>事件触发线程: 当事件符合触发条件被触发时，该线程会把对应的事件回调函数添加到任务队列的队尾，等待 JS 引擎处理。</li>
-<li>定时器触发线程: 浏览器定时计数器并不是由 JS 引擎计数的，阻塞会导致计时不准确。开启定时器触发线程来计时并触发计时，计时完成后会被添加到任务队列中，等待 JS 引擎处理。</li>
-<li>http 请求线程: http 请求的时候会开启一条请求线程。请求完成有结果了之后，将请求的回调函数添加到任务队列中，等待 JS 引擎处理。</li>
-</ul>
-</blockquote>
-</li>
-</ol>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -210,259 +183,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/10/19/2021-10-19/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-2021-5-6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/05/06/2021-5-6/">CDN</a>
-    </h1>
-  
-
-        
-        <a href="/2021/05/06/2021-5-6/" class="archive-article-date">
-  	<time datetime="2021-05-06T15:12:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>什么是CDN</li>
-</ul>
-<blockquote>
-<p>全称 Content Delivery Network,即内容分发网络。<br>10年前，还没有火车票代售点一说，12306.cn更是无从说起。那时候火车票还只能在火车站的售票大厅购买，而我所在的小县城并不通火车，火车票都要去市里的火车站购买，而从我家到县城再到市里，来回就是4个小时车程，简直就是浪费生命。后来就好了，小县城里出现了火车票代售点，甚至乡镇上也有了代售点，可以直接在代售点购买火车票，方便了不少，全市人民再也不用在一个点苦逼的排队买票了。</p>
-</blockquote>
-<blockquote>
-<p>简单的理解CDN就是这些代售点(缓存服务器)的承包商,他为买票者提供了便利,帮助他们在最近的地方(最近的CDN节点)用最短的时间(最短的请求时间)买到票(拿到资源),这样去火车站售票大厅排队的人也就少了。也就减轻了售票大厅的压力(起到分流作用,减轻服务器负载压力)。</p>
-</blockquote>
-<blockquote>
-<p>用户在浏览网站的时候，CDN会选择一个离用户最近的CDN边缘节点来响应用户的请求，这样海南移动用户的请求就不会千里迢迢跑到北京电信机房的服务器（假设源站部署在北京电信机房）上了。</p>
-</blockquote>
-<ul>
-<li>CDN缓存</li>
-</ul>
-<blockquote>
-<p>关于CDN缓存,在浏览器本地缓存失效后,浏览器会向CDN边缘节点发起请求。类似浏览器缓存,CDN边缘节点也存在着一套缓存机制。CDN边缘节点缓存策略因服务商不同而不同，但一般都会遵循http标准协议，通过http响应头中的 Cache-control 的字段来设置CDN边缘节点数据缓存时间。</p>
-</blockquote>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cache-control: max-age </span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>当浏览器向CDN节点请求数据时，CDN节点会判断缓存数据是否过期，若缓存数据并没有过期，则直接将缓存数据返回给客户端；否则，CDN节点就会向服务器发出回源请求，从服务器拉取最新数据，更新本地缓存，并将最新数据返回给客户端。 CDN服务商一般会提供基于文件后缀、目录多个维度来指定CDN缓存时间，为用户提供更精细化的缓存管理。</p>
-</blockquote>
-<ul>
-<li>CDN优势</li>
-</ul>
-<blockquote>
-<ol>
-<li>CDN节点解决了跨运营商和跨地域访问的问题，访问延时大大降低。</li>
-<li>大部分请求在CDN边缘节点完成，CDN起到了分流作用，减轻了源服务器的负载。 </li>
-</ol>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">浏览器</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/05/06/2021-5-6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2021-5-5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/05/05/2021-5-5/">DNS</a>
-    </h1>
-  
-
-        
-        <a href="/2021/05/05/2021-5-5/" class="archive-article-date">
-  	<time datetime="2021-05-05T14:47:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>什么是DNS</li>
-</ul>
-<blockquote>
-<p>全称 Domain Name System ,即域名系统<br>万维网上作为域名和IP地址相互映射的一个分布式数据库，能够使用户更方便的访问互联网，而不用去记住能够被机器直接读取的IP数串。DNS协议运行在UDP协议之上，使用端口号53。</p>
-</blockquote>
-<ul>
-<li> DNS解析</li>
-</ul>
-<blockquote>
-<p>通过域名,最终得到该域名对应的IP地址的过程叫做域名解析（或主机名解析）</p>
-</blockquote>
-<ul>
-<li>DNS缓存</li>
-</ul>
-<blockquote>
-<p>有dns的地方,就有缓存。浏览器、操作系统、Local DNS、根域名服务器，它们都会对DNS结果做一定程度的缓存。<br>DNS查询过程如下:</p>
-<ol>
-<li>首先搜索浏览器自身的DNS缓存,如果存在，则域名解析到此完成。</li>
-<li>如果浏览器自身的缓存里面没有找到对应的条目，那么会尝试读取操作系统的hosts文件看是否存在对应的映射关系,如果存在，则域名解析到此完成。<br>（windows系统本地host文件的路径          C:\Windows\System32\drivers\etc）</li>
-<li>如果本地hosts文件不存在映射关系，则查找本地DNS服务器(ISP服务器,或者自己手动设置的DNS服务器),如果存在,域名到此解析完成。</li>
-<li>如果本地DNS服务器还没找到的话,它就会向根服务器发出请求,进行递归查询。</li>
-</ol>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">浏览器</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/05/05/2021-5-5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -484,10 +217,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
