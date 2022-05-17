@@ -6,21 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://kobexu0824.github.io">
-  <title>CDN | kobexu的博客</title>
+  <title>vite+vue3.0 | kobexu的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是CDN   全称 Content Delivery Network,即内容分发网络。10年前，还没有火车票代售点一说，12306.cn更是无从说起。那时候火车票还只能在火车站的售票大厅购买，而我所在的小县城并不通火车，火车票都要去市里的火车站购买，而从我家到县城再到市里，来回就是4个小时车程，简直就是浪费生命。后来就好了，小县城里出现了火车票代售点，甚至乡镇上也有了代售点，可以直接在代售点">
+  <meta name="description" content="vite + vue3 + setup + pinia + ts + NaiveUI（搭建）1.初始化 vite 项目1234npm init vite@latest vite_framework  --template vue-ts (npm6.x)npm init vite@latest vite_framework  -- --template vue-ts (npm7+)yarn crea">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CDN">
-<meta property="og:url" content="https://kobexu0824.github.io/2021/05/06/2021-5-6/index.html">
+<meta property="og:title" content="vite+vue3.0">
+<meta property="og:url" content="https://kobexu0824.github.io/2022/05/17/2022-04-17/index.html">
 <meta property="og:site_name" content="kobexu的博客">
-<meta property="og:description" content="什么是CDN   全称 Content Delivery Network,即内容分发网络。10年前，还没有火车票代售点一说，12306.cn更是无从说起。那时候火车票还只能在火车站的售票大厅购买，而我所在的小县城并不通火车，火车票都要去市里的火车站购买，而从我家到县城再到市里，来回就是4个小时车程，简直就是浪费生命。后来就好了，小县城里出现了火车票代售点，甚至乡镇上也有了代售点，可以直接在代售点">
+<meta property="og:description" content="vite + vue3 + setup + pinia + ts + NaiveUI（搭建）1.初始化 vite 项目1234npm init vite@latest vite_framework  --template vue-ts (npm6.x)npm init vite@latest vite_framework  -- --template vue-ts (npm7+)yarn crea">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-05-06T15:12:26.000Z">
-<meta property="article:modified_time" content="2021-05-16T15:34:54.368Z">
+<meta property="article:published_time" content="2022-05-17T14:56:27.000Z">
+<meta property="article:modified_time" content="2022-05-17T14:58:02.133Z">
 <meta property="article:author" content="许大杰">
-<meta property="article:tag" content="随笔">
-<meta property="article:tag" content="http">
-<meta property="article:tag" content="浏览器">
+<meta property="article:tag" content="vue3">
+<meta property="article:tag" content="vite">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="kobexu的博客" type="application/atom+xml">
@@ -141,58 +140,92 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2021-5-6" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2022-04-17" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      CDN
+      vite+vue3.0
     </h1>
   
 
         
-        <a href="/2021/05/06/2021-5-6/" class="archive-article-date">
-  	<time datetime="2021-05-06T15:12:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-06</time>
+        <a href="/2022/05/17/2022-04-17/" class="archive-article-date">
+  	<time datetime="2022-05-17T14:56:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>什么是CDN</li>
-</ul>
-<blockquote>
-<p>全称 Content Delivery Network,即内容分发网络。<br>10年前，还没有火车票代售点一说，12306.cn更是无从说起。那时候火车票还只能在火车站的售票大厅购买，而我所在的小县城并不通火车，火车票都要去市里的火车站购买，而从我家到县城再到市里，来回就是4个小时车程，简直就是浪费生命。后来就好了，小县城里出现了火车票代售点，甚至乡镇上也有了代售点，可以直接在代售点购买火车票，方便了不少，全市人民再也不用在一个点苦逼的排队买票了。</p>
-</blockquote>
-<blockquote>
-<p>简单的理解CDN就是这些代售点(缓存服务器)的承包商,他为买票者提供了便利,帮助他们在最近的地方(最近的CDN节点)用最短的时间(最短的请求时间)买到票(拿到资源),这样去火车站售票大厅排队的人也就少了。也就减轻了售票大厅的压力(起到分流作用,减轻服务器负载压力)。</p>
-</blockquote>
-<blockquote>
-<p>用户在浏览网站的时候，CDN会选择一个离用户最近的CDN边缘节点来响应用户的请求，这样海南移动用户的请求就不会千里迢迢跑到北京电信机房的服务器（假设源站部署在北京电信机房）上了。</p>
-</blockquote>
+        <h1 id="vite-vue3-setup-pinia-ts-NaiveUI（搭建）"><a href="#vite-vue3-setup-pinia-ts-NaiveUI（搭建）" class="headerlink" title="vite + vue3 + setup + pinia + ts + NaiveUI（搭建）"></a>vite + vue3 + setup + pinia + ts + NaiveUI（搭建）</h1><h2 id="1-初始化-vite-项目"><a href="#1-初始化-vite-项目" class="headerlink" title="1.初始化 vite 项目"></a>1.初始化 vite 项目</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm init vite@latest vite_framework  --template vue-ts (npm6.x)</span><br><span class="line">npm init vite@latest vite_framework  -- --template vue-ts (npm7+)</span><br><span class="line">yarn create vite vite_framework  --template vue-ts (yarn)</span><br><span class="line">pnpm create vite vite_framework -- --template vue-ts (pnpm)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-格式化工具"><a href="#2-格式化工具" class="headerlink" title="2.格式化工具"></a>2.格式化工具</h2><h3 id="eslint-prettier-安装"><a href="#eslint-prettier-安装" class="headerlink" title="eslint,prettier 安装"></a>eslint,prettier 安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;安装eslint</span><br><span class="line">yarn add eslint --dev</span><br><span class="line">&#x2F;&#x2F;安装eslint插件（vue模版解析插件，支持ts插件，eslint插入prettier插件）</span><br><span class="line">yarn add eslint-plugin-vue @typescript-eslint&#x2F;eslint-plugin eslint-plugin-prettier --dev</span><br><span class="line">&#x2F;&#x2F;eslint对ts解析</span><br><span class="line">yarn add @typescript-eslint&#x2F;parser --dev</span><br><span class="line">&#x2F;&#x2F;安装prettier</span><br><span class="line">yarn add prettier -D</span><br><span class="line">&#x2F;&#x2F;解决 eslint 和 prettier 冲突</span><br><span class="line">yarn add eslint-config-prettier --dev</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li>CDN缓存</li>
-</ul>
+<li><p>eslint 配置</p>
 <blockquote>
-<p>关于CDN缓存,在浏览器本地缓存失效后,浏览器会向CDN边缘节点发起请求。类似浏览器缓存,CDN边缘节点也存在着一套缓存机制。CDN边缘节点缓存策略因服务商不同而不同，但一般都会遵循http标准协议，通过http响应头中的 Cache-control 的字段来设置CDN边缘节点数据缓存时间。</p>
+<p>root:true（ESLint 会在所有父级目录里寻找配置文件，一直到根目录，true 时停止查找） env (运行环境) parse:指定 eslint 解析器,vue-eslint-parser （解析<br>器可以对 vue 文件的 <templeate></templeate>解析） parserOptions:(parse 解析器的配置项)</p>
+<blockquote>
+<p>parser：（指定自定义解析器来解析<code>&lt;script&gt;</code>）<code>@typescript-eslint/parser</code> sourceType:module(如果代码是 ECMAScript 模块)) ecmaFeatures:(额外语言特<br>性){jsx,tsx} ecmaVersion (es 版本制定)</p>
 </blockquote>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cache-control: max-age </span><br></pre></td></tr></table></figure>
+<p>plugins:（存放插件名字，可省略 eslint-plugin 前缀）</p>
+<p>extends:指定代码规范,值是字符串或字符串数组</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>vite 的 eslint 插件配置（vite-plugin-eslint 浏览器显示 eslint 报错）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;vite.config.ts</span><br><span class="line">eslintPlugin(&#123;</span><br><span class="line">      include: [&#39;src&#x2F;**&#x2F;*js&#39;, &#39;src&#x2F;**&#x2F;*.vue&#39;, &#39;src&#x2F;**&#x2F;*.ts&#39;],</span><br><span class="line">      exclude: [&#39;.&#x2F;node_modules&#x2F;**&#39;],</span><br><span class="line">      cache: false</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>prettier 配置(.prettierrc.js)</li>
+</ul>
+<h3 id="huksy-lint-staged-配置"><a href="#huksy-lint-staged-配置" class="headerlink" title="huksy+lint-staged 配置"></a>huksy+lint-staged 配置</h3><blockquote>
+<p>git hook 工具可以设置在 git 各个阶段（pre-commit,commit-msg,pre-push 等出发命令）</p>
+</blockquote>
+<blockquote>
+<p>lint-staged 在 git 暂存文件运行 linters（避免每次提交对全部文件进行修复）</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;初始化husky</span><br><span class="line">npx husky-init &amp;&amp; yarn</span><br><span class="line">yarn install 下载</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>当浏览器向CDN节点请求数据时，CDN节点会判断缓存数据是否过期，若缓存数据并没有过期，则直接将缓存数据返回给客户端；否则，CDN节点就会向服务器发出回源请求，从服务器拉取最新数据，更新本地缓存，并将最新数据返回给客户端。 CDN服务商一般会提供基于文件后缀、目录多个维度来指定CDN缓存时间，为用户提供更精细化的缓存管理。</p>
+<p>npx husky-init 命令后会在项目根目录下生成.husky 目录,并且在 script 生成 prepare：husky install,执行 yarn 安装 node 包后 自动执行 husky install</p>
 </blockquote>
-<ul>
-<li>CDN优势</li>
-</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;配置lint-staged</span><br><span class="line">npm i lint-staged -D</span><br><span class="line">&#x2F;&#x2F;json 文件配置</span><br><span class="line">&quot;lint-staged&quot;: &#123;</span><br><span class="line">  &quot;*.&#123;vue,js,ts&#125;&quot;: &quot;eslint --fix&quot;</span><br><span class="line">&#125;,</span><br><span class="line">.husky&#x2F;pre-commit文件执行npx lint-staged（在pre-commit的时候执行eslint修复然后进行commit）</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-vue-工具"><a href="#3-vue-工具" class="headerlink" title="3.vue 工具"></a>3.vue 工具</h2><h3 id="vue-jsx-语法支持"><a href="#vue-jsx-语法支持" class="headerlink" title="vue-jsx 语法支持"></a>vue-jsx 语法支持</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;@vitejs&#x2F;plugin-vue-jsx&quot;: &quot;^1.3.10&quot;,</span><br><span class="line">&#x2F;&#x2F;vite.config.js</span><br><span class="line">import vueJsx from &#39;@vitejs&#x2F;plugin-vue-jsx&#39; &#x2F;&#x2F;jsx支持</span><br><span class="line">  plugins: [</span><br><span class="line">    vueJsx(),</span><br><span class="line">  ]</span><br></pre></td></tr></table></figure>
+
+<h3 id="状态管理器-Pinia"><a href="#状态管理器-Pinia" class="headerlink" title="状态管理器 Pinia"></a>状态管理器 Pinia</h3><blockquote>
+<p>轻量化，仅有 1kb，直观的 API 使用，模块化设计，全面 ts 支持</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;安装</span><br><span class="line">yarn add pinia</span><br><span class="line">&#x2F;&#x2F;全局注册pinia</span><br><span class="line">import &#123; createPinia &#125; from &#39;pinia&#39;</span><br><span class="line">const pinia &#x3D; createPinia()</span><br><span class="line">app.use(pinia)</span><br><span class="line">&#x2F;&#x2F;使用</span><br><span class="line">import &#123; defineStore &#125; from &#39;pinia&#39;</span><br><span class="line">&#x2F;&#x2F;main为每个module的唯一id</span><br><span class="line">export const useAppStore &#x3D; defineStore(&#39;main&#39;, &#123;</span><br><span class="line">  state: () &#x3D;&gt; &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      &#x2F;&#x2F; 所有这些属性都将自动推断其类型</span><br><span class="line">      counter: 0,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
 <blockquote>
-<ol>
-<li>CDN节点解决了跨运营商和跨地域访问的问题，访问延时大大降低。</li>
-<li>大部分请求在CDN边缘节点完成，CDN起到了分流作用，减轻了源服务器的负载。 </li>
-</ol>
+<p>storeToRefs Store 中提取属性同时保持其响应式，您需要使用 storeToRefs()</p>
 </blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import &#123; storeToRefs &#125; from &#39;pinia&#39;</span><br><span class="line">import &#123; useCounterStore &#125; from &#39;..&#x2F;pinia&#39;</span><br><span class="line">&#123;&#123;useCounterStore().counter&#125;&#125;</span><br><span class="line">const count &#x3D; storeToRefs(useCounterStore()).counter</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>$reset()重置 store 数据</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useCounterStore().$reset()</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>$patch,“state”对象同时应用多个更改</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">useCounterStore().$patch(&#123;</span><br><span class="line">  counter: store.counter + 1,</span><br><span class="line">  name: &#39;Abalam&#39;,</span><br><span class="line">&#125;)</span><br><span class="line">useCounterStore().$patch((state) &#x3D;&gt; &#123;</span><br><span class="line">  state.items.push(&#123; name: &#39;shoes&#39;, quantity: 1 &#125;)</span><br><span class="line">  state.hasChanged &#x3D; true</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="UI-组件按需加载、自动导入-naiveUI（unplugin-vue-components）"><a href="#UI-组件按需加载、自动导入-naiveUI（unplugin-vue-components）" class="headerlink" title="UI 组件按需加载、自动导入 naiveUI（unplugin-vue-components）"></a>UI 组件按需加载、自动导入 naiveUI（unplugin-vue-components）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">npm install -D naive-ui</span><br><span class="line">npm install unplugin-vue-components</span><br><span class="line">&#x2F;&#x2F;vite.config.js</span><br><span class="line">import Components from &#39;unplugin-vue-components&#x2F;vite&#39; &#x2F;&#x2F; 按需加载自定义组件</span><br><span class="line">import &#123; NaiveUiResolver &#125; from &#39;unplugin-vue-components&#x2F;resolvers&#39;</span><br><span class="line"> Components(&#123;</span><br><span class="line">      dts: true,</span><br><span class="line">      dirs: [], &#x2F;&#x2F; 按需加载的文件夹</span><br><span class="line">      resolvers: [NaiveUiResolver()] &#x2F;&#x2F; NaiveUi按需加载</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>//生成 components.d.ts</p>
+<h3 id="unplugin-auto-import-依赖按需导入"><a href="#unplugin-auto-import-依赖按需导入" class="headerlink" title="unplugin-auto-import(依赖按需导入)"></a>unplugin-auto-import(依赖按需导入)</h3><blockquote>
+<p>不需要手动的去 import { ref } from ‘vue’,或者 vue-router 的依赖</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">npm install -D unplugin-auto-import</span><br><span class="line">&#x2F;&#x2F;vite.config.js</span><br><span class="line">import AutoImport from &#39;unplugin-auto-import&#x2F;vite&#39;</span><br><span class="line">AutoImport(&#123;</span><br><span class="line">  imports: [&#39;vue&#39;, &#39;vue-router&#39;],</span><br><span class="line">  &#x2F;&#x2F; 可以选择auto-import.d.ts生成的位置，使用ts建议设置为&#39;src&#x2F;auto-import.d.ts&#39;</span><br><span class="line">  dts: &#39;src&#x2F;auto-import.d.ts&#39;</span><br><span class="line">&#125;),</span><br></pre></td></tr></table></figure>
 
       
 
@@ -237,15 +270,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">vue3</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">http</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">浏览器</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">vite</a>
         		</li>
       		
 		</ul>
@@ -264,18 +293,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/10/19/2021-10-19/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          事件循环机制
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/05/05/2021-5-5/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">DNS</div>
+    <a href="/2022/05/17/2022-05-17/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js常用</div>
       <i class="icon-circle-right"></i>
     </a>
   
